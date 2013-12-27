@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30E510B8-C2B6-413A-AA5B-DB3F20D82882}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>GSEDM.My.MyApplication</StartupObject>
+    <RootNamespace>GSEDM</RootNamespace>
+    <AssemblyName>GSEDM</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <ManifestCertificateThumbprint>818F925E8D20A583DC2D071413ADC396B0BC037D</ManifestCertificateThumbprint>
+    <ManifestKeyFile>GSEDM_TemporaryKey.pfx</ManifestKeyFile>
+    <PublishUrl>\\Spserver01\App\Goverment\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>SEDM</ProductName>
+    <PublisherName>Sangua</PublisherName>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>GSEDM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>GSEDM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Crypt, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Crypt.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="KOTAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\KOTAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.Win32.TaskScheduler, Version=1.6.4219.15519, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.TaskSchedulerEditor, Version=1.6.4219.15528, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.Win32.TaskSchedulerEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TimeSpan2, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\TimeSpan2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\IsSaveToWorkOrSamp.Designer.vb">
+      <DependentUpon>IsSaveToWorkOrSamp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\IsSaveToWorkOrSamp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Message.Designer.vb">
+      <DependentUpon>Message.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Message.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desc\Desc.Designer.vb">
+      <DependentUpon>Desc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Desc\Desc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desc\MailDesc.Designer.vb">
+      <DependentUpon>MailDesc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Desc\MailDesc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desc\SMSDesc.Designer.vb">
+      <DependentUpon>SMSDesc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Desc\SMSDesc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holmes\DB\c037DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>c037DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Holmes\DB\SettingsDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SettingsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\SendMail.Designer.vb">
+      <DependentUpon>SendMail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\SendMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Prject\AddProject.Designer.vb">
+      <DependentUpon>AddProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prject\AddProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prject\AddProject2.Designer.vb">
+      <DependentUpon>AddProject2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prject\AddProject2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\AddCat.Designer.vb">
+      <DependentUpon>AddCat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\AddCat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\AddSample.Designer.vb">
+      <DependentUpon>AddSample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\AddSample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\MailSamp.Designer.vb">
+      <DependentUpon>MailSamp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\MailSamp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\SampleMaintain.Designer.vb">
+      <DependentUpon>SampleMaintain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\SampleMaintain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\SMSSamp.Designer.vb">
+      <DependentUpon>SMSSamp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\SMSSamp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\Seting.Designer.vb">
+      <DependentUpon>Seting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Seting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\SMSSetting.Designer.vb">
+      <DependentUpon>SMSSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\SMSSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\UsuallySetting.Designer.vb">
+      <DependentUpon>UsuallySetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\UsuallySetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\WebMailSetting.Designer.vb">
+      <DependentUpon>WebMailSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\WebMailSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMS\SMS.Designer.vb">
+      <DependentUpon>SMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\SMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.vb">
+      <DependentUpon>Test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\AddWork.Designer.vb">
+      <DependentUpon>AddWork.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\AddWork.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\AddWorkArrange.Designer.vb">
+      <DependentUpon>AddWorkArrange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\AddWorkArrange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\ChooseMailBp.Designer.vb">
+      <DependentUpon>ChooseMailBp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\ChooseMailBp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\SmsOrMail.Designer.vb">
+      <DependentUpon>SmsOrMail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\SmsOrMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\Step1.Designer.vb">
+      <DependentUpon>Step1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\Step1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\Step2.Designer.vb">
+      <DependentUpon>Step2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\Step2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\Step3_Day.Designer.vb">
+      <DependentUpon>Step3_Day.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\Step3_Day.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\Step3_Month.Designer.vb">
+      <DependentUpon>Step3_Month.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\Step3_Month.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\Step3_Week.Designer.vb">
+      <DependentUpon>Step3_Week.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\Step3_Week.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\Step4.Designer.vb">
+      <DependentUpon>Step4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\Step4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\WorkArrange.Designer.vb">
+      <DependentUpon>WorkArrange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\WorkArrange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkArrange\WorkInfo.Designer.vb">
+      <DependentUpon>WorkInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WorkArrange\WorkInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\IsSaveToWorkOrSamp.resx">
+      <DependentUpon>IsSaveToWorkOrSamp.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Message.resx">
+      <DependentUpon>Message.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desc\Desc.resx">
+      <DependentUpon>Desc.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desc\MailDesc.resx">
+      <DependentUpon>MailDesc.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desc\SMSDesc.resx">
+      <DependentUpon>SMSDesc.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\SendMail.resx">
+      <DependentUpon>SendMail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prject\AddProject.resx">
+      <DependentUpon>AddProject.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prject\AddProject2.resx">
+      <DependentUpon>AddProject2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\AddCat.resx">
+      <DependentUpon>AddCat.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\AddSample.resx">
+      <DependentUpon>AddSample.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\MailSamp.resx">
+      <DependentUpon>MailSamp.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SampleMaintain.resx">
+      <DependentUpon>SampleMaintain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SMSSamp.resx">
+      <DependentUpon>SMSSamp.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\Seting.resx">
+      <DependentUpon>Seting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\SMSSetting.resx">
+      <DependentUpon>SMSSetting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\UsuallySetting.resx">
+      <DependentUpon>UsuallySetting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\WebMailSetting.resx">
+      <DependentUpon>WebMailSetting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMS\SMS.resx">
+      <DependentUpon>SMS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Test.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\AddWork.resx">
+      <DependentUpon>AddWork.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\AddWorkArrange.resx">
+      <DependentUpon>AddWorkArrange.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\ChooseMailBp.resx">
+      <DependentUpon>ChooseMailBp.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\SmsOrMail.resx">
+      <DependentUpon>SmsOrMail.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\Step1.resx">
+      <DependentUpon>Step1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\Step2.resx">
+      <DependentUpon>Step2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\Step3_Day.resx">
+      <DependentUpon>Step3_Day.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\Step3_Month.resx">
+      <DependentUpon>Step3_Month.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\Step3_Week.resx">
+      <DependentUpon>Step3_Week.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\Step4.resx">
+      <DependentUpon>Step4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\WorkArrange.resx">
+      <DependentUpon>WorkArrange.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkArrange\WorkInfo.resx">
+      <DependentUpon>WorkInfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Holmes\DB\c037.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Holmes\DB\Settings.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Email.png" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\birthday_01.JPG" />
+    <Content Include="Images\birthday_02.jpg" />
+    <Content Include="Images\logo.ico" />
+    <Content Include="logo.ico" />
+    <None Include="GSEDM_TemporaryKey.pfx" />
+    <None Include="Holmes\DB\c037DataSet.xsc">
+      <DependentUpon>c037DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Holmes\DB\c037DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>c037DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Holmes\DB\c037DataSet.xss">
+      <DependentUpon>c037DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Holmes\DB\SettingsDataSet.xsc">
+      <DependentUpon>SettingsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Holmes\DB\SettingsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SettingsDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Holmes\DB\SettingsDataSet.xss">
+      <DependentUpon>SettingsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Images\Thumbs.db" />
+    <None Include="app.config" />
+    <BaseApplicationManifest Include="My Project\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Holmes\Holmes\Holmes.vbproj">
+      <Project>{8A4E653C-EB9E-4B5A-80D8-B050C29BF06C}</Project>
+      <Name>Holmes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Holmes\Ds\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
