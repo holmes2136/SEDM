@@ -12,3 +12,5 @@ features:
 (5)customer birthday notify
 
 ```
+
+![alt text](https://dl.dropboxusercontent.com/u/23971112/9.JPG "Title")
